@@ -1,7 +1,10 @@
 import { navIcons } from './nav.js';
+import { cardImport } from './card.js';
+
+
 const promo = [
     {
-        image: 'assets/promos/diskon-by-App.jpeg',
+        image: 'assets/promos/Promosi.png',
         alt: 'Diskon by App',
         title: 'Diskon by App',
         description: 'Dapatkan diskon menarik dengan menggunakan aplikasi kami.',
@@ -23,6 +26,9 @@ function iconsHTML(navIcons) {
     `).join('');
 }
 
+const cards = await cardImport.then(card => card);
+
+
 export const home = document.createElement('main');
 home.className = 'home';
 home.innerHTML = `
@@ -35,13 +41,16 @@ home.innerHTML = `
             <h2 class="section-title">Featured Menu</h2>
             <p>Temukan menu terbaru kami yang lezat dan menggugah selera.</p>
         </div>
+        <div class="category-section">
+            <span class="category-item category-active">All</span>
+            <span class="category-item">Roti</span>
+            <span class="category-item">Kue Tradisional</span>
+            <span class="category-item">Puding</span>
+            <span class="category-item">Donat</span>
+        </div>
         <hr>
         <div class="menu-items">
-            <div class="menu-item">
-                <img src="assets/menu/1.jpg" alt="Menu 1" class="menu-image">
-                <h4 class="menu-name">Kue Coklat</h4>
-                <p class="menu-description">Kue coklat lezat dengan lapisan krim yang lembut.</p>                    <span class="menu-price">Rp 25.000</span>
-            </div>
+            ${cards}
         </div>
-    </section>
-    `;
+    </section >
+ `;

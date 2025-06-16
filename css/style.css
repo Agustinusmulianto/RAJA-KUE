@@ -4,6 +4,7 @@
   --text-color: #333;
   --hover-color: #dcbf83;
   --gap: 20px;
+  --price: #727272;
   --margin: 6rem;
   --font: 1.2rem;
   --font-large: 1.5rem;
@@ -16,13 +17,7 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
-.homepage {
-  font-size: var(--font-large);
-  color: var(--primary-color);
-  text-decoration: none;
-  font-weight: bold;
-  text-transform: uppercase;
-}
+
 .nav-list {
   list-style: none;
   display: flex;
@@ -31,11 +26,25 @@
   gap: var(--gap);
 }
 .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: var(--secondary-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px var(--margin);
+  padding: 0 var(--margin);
+  z-index: 1000;
+}
+.nav-brand {
+  display: flex;
+  align-items: center;
+}
+.raja-kue-logo {
+  width: 100px;
+  height: 100px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 50%;
 }
 .list-item a {
   color: var(--text-color);
@@ -87,6 +96,10 @@
   margin-left: var(--gap);
   fill: var(--primary-color);
 }
+main {
+  position: relative;
+  top: 100px;
+}
 .promo-section {
   margin-top: var(--gap);
 }
@@ -95,6 +108,8 @@
   height: auto;
   display: block;
   margin: 0 auto;
+  object-fit: cover;
+  overflow: hidden;
 }
 .shop-section {
   display: flex;
@@ -123,4 +138,69 @@ hr {
   height: 3px;
   background-color: var(--primary-color);
   margin: var(--gap) 0;
+}
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--gap);
+  margin-bottom: var(--gap);
+}
+.card {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  padding: var(--gap);
+  margin-bottom: var(--gap);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.card-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  margin-bottom: var(--gap);
+}
+.card-price {
+  color: var(--price);
+  font-size: 15px;
+  text-decoration: line-through;
+}
+.card-after-discount {
+  color: var(--primary-color);
+  font-size: 20px;
+  font-weight: bold;
+}
+.category-section {
+  display: flex;
+  gap: var(--gap);
+  justify-content: center;
+}
+.category-item {
+  cursor: pointer;
+  color: var(--price);
+}
+.category-item:hover {
+  color: var(--text-color);
+}
+.category-active {
+  color: var(--text-color);
+  font-weight: bold;
 }

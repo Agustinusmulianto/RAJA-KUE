@@ -1,0 +1,100 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Roti Bakso Sapi",
+            "category": "roti",
+            "image": "/assets/products/Roti Bakso Sapi.jpeg",
+            "price": 12000,
+            "description": "Roti empuk isi bakso sapi yang lezat."
+        },
+        {
+            "id": 2,
+            "name": "Donut Ring Meisis",
+            "category": "donat",
+            "image": "/assets/products/Donut Ring Meisis.jpeg",
+            "price": 8000,
+            "description": "Donut bulat dengan taburan meisis warna-warni."
+        },
+        {
+            "id": 3,
+            "name": "Lapis Legit Coklat",
+            "category": "kue lapis",
+            "image": "/assets/products/Lapis Legit Coklat.jpeg",
+            "price": 12000,
+            "description": "Kue lapis warna-warni khas Indonesia."
+        },
+        {
+            "id": 4,
+            "name": "Chokoreto Cookies",
+            "category": "kukis",
+            "image": "/assets/products/Chokoreto Cookies.jpg",
+            "price": 9500,
+            "description": "Kukis renyah dengan coklat chips meleleh."
+        },
+        {
+            "id": 5,
+            "name": "Kelapa Pandan Puding",
+            "category": "puding",
+            "image": "/assets/products/Kelapa Pandan Pudding.jpeg",
+            "price": 7500,
+            "description": "Puding lembut rasa coklat susu."
+        },
+        {
+            "id": 6,
+            "name": "Bika Ambon",
+            "category": "kue tradisional",
+            "image": "/assets/products/Bika Ambon.jpeg",
+            "price": 12000,
+            "description": "Klepon isi gula merah, dilapisi kelapa parut."
+        },
+        {
+            "id": 7,
+            "name": "Banana Chocolate",
+            "category": "donat",
+            "image": "/assets/products/Banana Chocolate.jpg",
+            "price": 9000,
+            "description": "Donut pisang dengan isian coklat yang lezat."
+        },
+        {
+            "id": 8,
+            "name": "Roti Coklat Keju",
+            "category": "roti",
+            "image": "/assets/products/Roti Coklat Keju.jpg",
+            "price": 11000,
+            "description": "Roti isi coklat dan keju yang gurih dan manis."
+        },
+        {
+            "id": 9,
+            "name": "Pudding Buah Segar",
+            "category": "puding",
+            "image": "/assets/products/Pudding Buah Segar.jpg",
+            "price": 8500,
+            "description": "Puding segar dengan potongan buah-buahan tropis."
+        },
+        {
+            "id": 10,
+            "name": "Arem-arem (lontong)",
+            "category": "kue tradisional",
+            "image": "/assets/products/Arem-arem (lontong).jpeg",
+            "price": 9500,
+            "description": "Arem-arem isi sayuran dan daging, dibungkus daun pisang."
+        },
+        {
+            "id": 11,
+            "name": "Onde Kacang Hijau",
+            "category": "kue tradisional",
+            "image": "/assets/products/Onde Kacang Hijau.jpeg",
+            "price": 7000,
+            "description": "Onde onde isi kacang hijau yang kenyal dan manis."
+        },
+        {
+            "id": 12,
+            "name": "Korean Garlic Cream Cheese",
+            "category": "roti",
+            "image": "/assets/products/Korean Garlic Cream Cheese.jpeg",
+            "price": 15000,
+            "description": "Roti isi krim keju bawang putih ala Korea yang gurih."
+        }
+    ]
+}

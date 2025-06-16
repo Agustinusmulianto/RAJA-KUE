@@ -29,11 +29,16 @@ const generateList = (items, wrapper = 'li', itemClass = '') =>
     ).join('');
 
 // ======= Create Nav Element =======
-export function renderNav(title) {
+export function renderNav(rajaKue) {
+
     const navElement = document.createElement('nav');
     navElement.className = 'navbar';
     navElement.innerHTML = `
-        <a href="index.html" class="homepage">${title}</a>
+        <div class="nav-brand">
+            <a href="./index.html" class="nav-title">
+                <img src="${rajaKue.logo}" alt="${rajaKue.title} Logo" class="raja-kue-logo">
+            </a>            
+        </div>
         <ul class="nav-list">
             ${generateList(menuItems, 'li', 'list-item')}
         </ul>
