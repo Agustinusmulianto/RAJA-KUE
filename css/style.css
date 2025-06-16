@@ -1,6 +1,6 @@
 :root {
   --primary-color: #c39229;
-  --secondary-color: #f0f0f0;
+  --secondary-color: #ffffff;
   --text-color: #333;
   --hover-color: #dcbf83;
   --gap: 20px;
@@ -18,8 +18,10 @@
 }
 .homepage {
   font-size: var(--font-large);
-  color: var(--secondary-color);
+  color: var(--primary-color);
   text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 .nav-list {
   list-style: none;
@@ -29,30 +31,96 @@
   gap: var(--gap);
 }
 .navbar {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+  background-color: var(--secondary-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px var(--margin);
+  padding: 24px var(--margin);
 }
 .list-item a {
-  color: var(--secondary-color);
+  color: var(--text-color);
   text-decoration: none;
   padding: 10px 15px;
   transition: background-color 0.3s ease;
   font-size: var(--font);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+.list-item a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  right: 0;
+  height: 2px;
+  width: 80%;
+  background: var(--primary-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.list-item a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.list-item a:not(:hover)::after {
+  transform: scaleX(0);
+  transform-origin: right;
+}
+.list-item a:hover {
+  color: var(--primary-color);
 }
 
 .nav-icons {
   display: flex;
-  justify-content: center;
   align-items: center;
+  align-content: center;
   cursor: pointer;
 }
-.icon-off-nav {
+.icon-item {
   width: 20px;
   height: 20px;
   margin-left: var(--gap);
-  fill: var(--secondary-color);
+  fill: var(--primary-color);
+}
+.promo-section {
+  margin-top: var(--gap);
+}
+.promo-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.shop-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--gap);
+  margin: 0 var(--margin);
+}
+.icon-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-section svg {
+  width: 50px;
+  height: 50px;
+  fill: var(--primary-color);
+  margin: var(--gap) 0;
+}
+.menu-title {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: var(--gap);
+}
+hr {
+  border: none;
+  height: 3px;
+  background-color: var(--primary-color);
+  margin: var(--gap) 0;
 }
