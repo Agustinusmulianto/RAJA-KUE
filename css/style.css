@@ -194,6 +194,7 @@ hr {
   justify-content: center;
 }
 .category-item {
+  text-transform: capitalize;
   cursor: pointer;
   color: var(--price);
 }
@@ -203,4 +204,37 @@ hr {
 .category-active {
   color: var(--text-color);
   font-weight: bold;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
+.footer {
+  background-color: var(--primary-color);
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: var(--margin);
+  color: var(--secondary-color);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
 }
