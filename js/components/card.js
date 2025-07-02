@@ -2,6 +2,8 @@ export function Card(data) {
 
     const { image, name, price } = data;
     const after_discount = price - (price * 0.1);
+    console.log(image);
+
     return `
         <div class="card">
             <img src="${image}" alt="${name}" class="card-image">
