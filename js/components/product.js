@@ -14,7 +14,7 @@ async function fetchData(path) {
 }
 
 export async function Products() {
-    const path = './api/products.json';
+    const path = 'api/products.json';
     const data = await fetchData(path);
 
     if (data) {
