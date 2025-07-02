@@ -6,9 +6,14 @@ export async function HomePage() {
   const product = await Products();
   return `
 ${promo}
+<section class="menu-section">
 <hr>
-<p>ahahahahah</p>
+<div class="menu-title">
+<h2>Featured Menu</h2>
+<p>The best from our kitchen</p>
+</div>
 <hr>
 ${product}
+</section>
   `;
 }
