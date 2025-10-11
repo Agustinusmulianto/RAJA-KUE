@@ -1,8 +1,10 @@
+import { instagram, facebook } from "./icons/icon.js";
+
 export function Footer() {
     const footerElement = document.createElement('footer');
     footerElement.className = 'footer';
     const pElement = document.createElement('p');
-    pElement.textContent = '© 2024 Raja Kue. All rights reserved.';
+    pElement.textContent = '© 2025 Raja Kue. All rights reserved.';
 
     // Array of class names for the divs
     const section = document.createElement('section');
@@ -45,11 +47,11 @@ export function Footer() {
             name: 'footer-social',
             divChild: [
                 {
-                    icon: 'Instagram',
+                    icon: instagram,
                     url: '#instagram',
                 },
                 {
-                    icon: 'Facebook',
+                    icon: facebook,
                     url: '#facebook',
                 },
             ]
@@ -79,8 +81,10 @@ export function Footer() {
             } else if (child.url && child.icon) {
                 // For social icons
                 const a = document.createElement('a');
+                const span = document.createElement('span');
                 a.href = child.url;
-                a.innerText = child.icon;
+                span.innerHTML = child.icon;
+                a.appendChild(span);
                 div.appendChild(a);
             } else if (child.numb) {
                 // For delivery number
