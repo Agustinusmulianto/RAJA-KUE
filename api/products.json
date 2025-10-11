@@ -95,6 +95,14 @@
             "image": "../assets/products/Korean Garlic Cream Cheese.jpeg",
             "price": 15000,
             "description": "Roti isi krim keju bawang putih ala Korea yang gurih."
+        },
+        {
+            "id": 13,
+            "name": "Lemon Tart",
+            "category": "roti",
+            "image": "../assets/products/Lemon Tart.jpeg",
+            "price": 149000,
+            "description": "Tart dengan isian lemon segar yang asam dan manis."
         }
     ]
 }
