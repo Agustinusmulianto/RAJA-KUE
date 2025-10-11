@@ -4,7 +4,7 @@
             "id": 1,
             "name": "Roti Bakso Sapi",
             "category": "roti",
-            "image": "/assets/products/Roti Bakso Sapi.jpeg",
+            "image": "./assets/products/Roti Bakso Sapi.jpeg",
             "price": 12000,
             "description": "Roti empuk isi bakso sapi yang lezat."
         },
