@@ -124,11 +124,52 @@
   margin: 2rem var(--margin);
 }
 .menu-title {
-  text-align: center;
+  font-size: var(--font-large);
+  font-weight: bold;
+  color: var(--primary-color);
 }
-.menu-title p {
+.menu-section p {
   color: var(--price);
+  margin-top: 0.5rem;
+  font-weight: bold;
 }
+
+.main-menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+.menu-sidebar {
+  width: 20%;
+  margin-top: 0.8rem;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  height: fit-content;
+  border: solid var(--primary-color) 1px;
+}
+.menu-categories {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.category-item {
+  cursor: pointer;
+  color: var(--text-color);
+}
+.category-item:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+  font-weight: bold;
+}
+.menu-content {
+  width: 75%;
+  margin-top: -2rem;
+}
+
 .cards {
   display: flex;
   flex-wrap: wrap;

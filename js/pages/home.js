@@ -1,5 +1,5 @@
 import { PromoSection } from "../components/promo.js";
-import { ProductSection, Products } from "../components/product.js";
+import { Products } from "../components/product.js";
 export async function HomePage() {
   const promoPath = "assets/promos/Promosi.png";
   const promo = PromoSection(promoPath)

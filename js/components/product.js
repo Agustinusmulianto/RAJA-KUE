@@ -13,24 +13,45 @@ async function fetchData(path) {
     }
 }
 
+export function ProductSection(datas) {
+
+    const dataProducts = datas.slice(0, 4);
+
+    return dataProducts.map(data => Card(data));
+}
+
+export function allProducts(datas) {
+
+    return datas.map(data => Card(data));
+}
+
+
 export async function Products() {
     const path = 'api/products.json';
     const data = await fetchData(path);
 
     if (data) {
-        const productElements = ProductSection(data); // data sudah ready
+        const productPreview = ProductSection(data);
         const div = document.createElement('div');
         div.className = 'cards';
-        div.innerHTML = productElements.join(""); // gabungkan hasil map ke HTML string
-
-        return div.outerHTML; // ⬅️ inilah yang akan dikembalikan ke HomePage
+        div.innerHTML = productPreview.join("");
+        return div.outerHTML;
     }
 
-    return '<p>Produk tidak tersedia.</p>'; // fallback jika data null
+    return '<p>Produk tidak tersedia.</p>';
 }
 
+export async function ProductsAll() {
+    const path = 'api/products.json';
+    const data = await fetchData(path);
 
-export function ProductSection(datas) {
+    if (data) {
+        const productAll = allProducts(data);
+        const div = document.createElement('div');
+        div.className = 'cards';
+        div.innerHTML = productAll.join("");
+        return div.outerHTML;
+    }
 
-    return datas.map(data => Card(data));
+    return '<p>Produk tidak tersedia.</p>';
 }
