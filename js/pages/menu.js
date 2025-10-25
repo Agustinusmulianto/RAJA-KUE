@@ -1,5 +1,6 @@
 import { ProductsAll } from "../components/product.js";
 
+const listItems = ['All', 'Cake', 'Bread', 'Pastry', 'Dessert'];
 
 export async function MenuPage() {
   const productList = await ProductsAll();
@@ -11,10 +12,7 @@ export async function MenuPage() {
       <aside class="menu-sidebar">
         <h2>Categories</h2>
         <ul class="menu-categories">
-          <li class="category-item">All</li>
-          <li class="category-item">Cake</li>
-          <li class="category-item">Bread</li>
-          <li class="category-item">Pastry</li>
+          ${listItems.map(item => `<li class="category-item"> <a href="">${item}</a></li>`).join('')}
         </ul>
       </aside>
       <div class="menu-content">

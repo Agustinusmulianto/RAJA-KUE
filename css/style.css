@@ -131,17 +131,16 @@
 .menu-section p {
   color: var(--price);
   margin-top: 0.5rem;
+  margin-bottom: 1rem;
   font-weight: bold;
 }
 
 .main-menu-container {
   display: flex;
-  justify-content: space-between;
-  align-content: flex-start;
+  gap: 2rem;
 }
 .menu-sidebar {
-  width: 20%;
-  margin-top: 0.8rem;
+  width: 15%;
   padding: 1rem 1.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -160,28 +159,26 @@
   cursor: pointer;
   color: var(--text-color);
 }
+.category-item a {
+  text-decoration: none;
+  color: inherit;
+}
 .category-item:hover {
   color: var(--primary-color);
   text-decoration: underline;
   font-weight: bold;
-}
-.menu-content {
-  width: 75%;
-  margin-top: -2rem;
 }
 
 .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 10px;
-  margin-top: 2rem;
+  gap: 2rem;
 }
 
 .card {
-  width: 15rem;
+  width: 12rem;
   height: 23rem;
-  margin: 10px 0;
   background: white;
   border-radius: 10px;
   transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -191,6 +188,7 @@
   display: flex;
   flex-direction: column;
   align-content: center;
+  overflow: hidden;
 }
 
 .card-image {
@@ -198,6 +196,10 @@
   height: 12rem;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
+}
+.card-image:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
 }
 
 .card-content {
@@ -207,7 +209,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
 }
 
 .card-title {
@@ -296,4 +297,33 @@ hr {
   width: 50px;
   height: 50px;
   fill: var(--secondary-color);
+}
+
+@media screen and (max-width: 600px) {
+  * {
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  .main-menu-container {
+    flex-direction: column;
+  }
+  .menu-sidebar {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .menu-categories {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 1rem;
+  }
+  .category-item {
+    white-space: nowrap;
+    flex: 0 0 auto;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    border: solid var(--primary-color) 1px;
+    border-radius: 5px;
+    background-color: white;
+  }
 }
